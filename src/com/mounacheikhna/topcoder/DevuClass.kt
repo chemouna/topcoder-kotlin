@@ -8,7 +8,9 @@ import java.util.function.Predicate
 /**
  * Created by m.cheikhna on 29/05/2017.
  */
-public class DevuClass {
+class DevuClass {
+
+  //BBGBGGGGBBGGB
 
   fun findCostOfRearranging(arrangement: String, type: Int): Int {
     var b = 0
@@ -84,13 +86,17 @@ public class DevuClass {
 fun main(args: Array<String>) { // throws IOException
   val bufferedReader = BufferedReader(InputStreamReader(System.`in`))
   val stringBuilder = StringBuilder()
-  val devuclass = DevuClass()
+  val devuClass = DevuClass()
   var t = Integer.parseInt(bufferedReader.readLine())
+  println("t: "+ t)
   while (t > 0) {
     val type = Integer.parseInt(bufferedReader.readLine())
-    val costOfRearranging = devuclass.findCostOfRearranging(bufferedReader.readLine(), type)
+    println("Input type: $type")
+    val costOfRearranging = devuClass.findCostOfRearranging(bufferedReader.readLine(), type)
+    println("costOfRearranging : "+ costOfRearranging)
     stringBuilder.append(costOfRearranging).append('\n')
     t--
+    println("current value of t: "+ t)
   }
   System.out.println(stringBuilder)
 }
